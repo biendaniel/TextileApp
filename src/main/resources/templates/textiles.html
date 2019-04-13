@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" />
+
+    <script th:src="@{/webjars/jquery/3.3.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+
+    <style>
+        table{
+            background-color: lightslategray;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <td>Nazwa</td>
+                <td>Rodzaj tkaniny</td>
+                <td>Cena</td>
+                <td>Ilość</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="textile : ${textiles}">
+                <td th:text="${textile.name}"></td>
+                <td th:text="${textile.textileKind}"></td>
+                <td th:text="${textile.pricePerMeter}"></td>
+                <td th:text="${textile.amount}"></td>
+                <td><a th:href="${'/textile/delete/'+textile.id}">Usuń</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <a th:href="@{/}">Wróć</a> ||
+    <a th:href="@{/textile/add}">Dodaj nowy materiał</a>
+</div>
+</body>
+</html>

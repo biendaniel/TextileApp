@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" />
+
+    <script th:src="@{/webjars/jquery/3.3.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+</head>
+<body>
+    <div class="container">
+
+        <a th:href="@{/textile/add}" ><button class="btn btn-dark" type="submit" >Dodaj nowy materiał</button></a>
+            <a th:href="@{/textile}"  ><button class="btn btn-light" type="submit" > Pokaż listę</button></a>
+
+    </div>
+</body>
+</html>

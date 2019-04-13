@@ -1,0 +1,16 @@
+security:
+  oauth2:
+    client:
+      clientId: 809832659361638
+      clientSecret: 769a473dec40480a913b5e927a7f786e
+      accessTokenUri: https://graph.facebook.com/oauth/access_token
+      userAuthorizationUri: https://www.facebook.com/dialog/oauth
+      tokenName: oauth_token
+      authenticationScheme: query
+      clientAuthenticationScheme: form
+    resource:
+      userInfoUri: https://graph.facebook.com/me
+
+spring:
+  thymeleaf:
+    cache: false
